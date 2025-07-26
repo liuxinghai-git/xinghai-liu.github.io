@@ -1,23 +1,691 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>项目预留域名: hotel101losangeles.com/</title> <!-- 替换为你的域名 -->
-    <meta name="description" content="该域名用于未来项目开发，预计2026年启动">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洛杉矶旅游指南 - 美景与酒店推荐</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1515896769250-48f0cf0bfff6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
-<body>
-    <!-- 法律效力声明 -->
-    <h1>项目预留声明</h1>
-    <p>本域名 <strong>hotel101losangeles.com/</strong> 已预留用于未来项目开发。</p >
-    <p>预计启动时间：2026年第一季度</p >
-    <p>业务合作请联系：bigsea0922@gmail.com</p > <!-- 需真实邮箱 -->
-    <!-- 非交易声明 -->
-    <p style="color:#888;font-size:0.9em;">
-        *注：本域名非出售状态，请勿询价
-    </p >
-	<!-- 添加到<body>末尾 -->
+<body class="bg-gray-50 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-umbrella-beach text-2xl text-blue-500 mr-2"></i>
+                <span class="text-xl font-bold text-gray-800">洛杉矶旅游指南</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#scenic" class="text-gray-700 hover:text-blue-500 transition-all">美景排行</a>
+                <a href="#hotels" class="text-gray-700 hover:text-blue-500 transition-all">酒店推荐</a>
+                <a href="#tips" class="text-gray-700 hover:text-blue-500 transition-all">旅行贴士</a>
+            </div>
+            <button class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
 
-    <p>本页面创建于 <span id="timestamp">2025-07-04T00:00:00Z</span></p >
-</div>
+    <!-- 英雄区域 -->
+    <header class="hero-bg text-white py-20 md:py-32 px-4 text-center" style="background-image: url('https://images.unsplash.com/photo-1672279410716-c676739163e9?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-pulse">天使之城 · 洛杉矶</h1>
+            <p class="text-xl md:text-2xl mb-8">阳光、海滩、好莱坞，体验加州梦幻之旅</p>
+            <a href="#scenic" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition-all inline-block">探索美景</a>
+        </div>
+    </header>
+
+    <!-- 美景排行榜 -->
+    <section id="scenic" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">洛杉矶十大必游景点</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 景点1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" 
+                             alt="圣莫尼卡海滩" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full font-bold">No.1</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">圣莫尼卡海滩</h3>
+                        <p class="text-gray-600 mb-4">洛杉矶最著名的海滩之一，拥有标志性的码头和游乐园，日落时分尤为迷人。</p>
+                        <div class="flex items-center text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 ml-2">4.8 (12,345)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700"><i class="fas fa-clock mr-1"></i>建议时长: 3-4小时</span>
+                            <span class="text-blue-500 font-medium">免费开放</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 景点2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1609924211018-5526c55bad5b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="好莱坞标志" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-gray-400 text-white px-3 py-1 rounded-full font-bold">No.2</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">好莱坞标志</h3>
+                        <p class="text-gray-600 mb-4">洛杉矶最具标志性的地标，可以在格里菲斯公园或周边山区远眺或近距离观赏。</p>
+                        <div class="flex items-center text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-600 ml-2">4.7 (9,876)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700"><i class="fas fa-clock mr-1"></i>建议时长: 1-2小时</span>
+                            <span class="text-blue-500 font-medium">免费开放</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 景点3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="relative h-48">
+                        <img src="https://gips2.baidu.com/it/u=555100181,4085340763&fm=3074&app=3074&f=JPEG"
+                             alt="环球影城" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-full font-bold">No.3</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">环球影城</h3>
+                        <p class="text-gray-600 mb-4">世界著名的电影主题公园，提供惊险刺激的游乐设施和电影幕后制作体验。</p>
+                        <div class="flex items-center text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 ml-2">4.9 (15,678)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700"><i class="fas fa-clock mr-1"></i>建议时长: 全天</span>
+                            <span class="text-blue-500 font-medium">$109起</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 景点4-6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="relative h-48">
+                        <img src="https://miaobi-lite.bj.bcebos.com/miaobi/5mao/b%275qC86YeM6I%2By5pav5aSp5paH5Y%2BwXzE3MzExOTAwMzIuODQ1NjY1NQ%3D%3D%27/0.png"
+                             alt="格里菲斯天文台" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-gray-500 text-white px-3 py-1 rounded-full font-bold">No.4</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">格里菲斯天文台</h3>
+                        <p class="text-gray-600 mb-4">俯瞰洛杉矶全景的最佳地点，同时是天文爱好者的天堂，夜间观星尤为壮观。</p>
+                        <div class="flex items-center text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 ml-2">4.8 (11,234)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700"><i class="fas fa-clock mr-1"></i>建议时长: 2-3小时</span>
+                            <span class="text-blue-500 font-medium">免费开放</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="比佛利山庄" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-gray-500 text-white px-3 py-1 rounded-full font-bold">No.5</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">比佛利山庄</h3>
+                        <p class="text-gray-600 mb-4">洛杉矶最奢华的住宅区和购物区，罗迪欧大道是世界顶级品牌的聚集地。</p>
+                        <div class="flex items-center text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-600 ml-2">4.6 (8,765)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700"><i class="fas fa-clock mr-1"></i>建议时长: 2-3小时</span>
+                            <span class="text-blue-500 font-medium">免费参观</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="relative h-48">
+                        <img src="https://img0.baidu.com/it/u=1411693087,3718125352&fm=253&app=138&f=JPEG?w=800&h=1422" 
+                             alt="迪士尼乐园" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-gray-500 text-white px-3 py-1 rounded-full font-bold">No.6</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">迪士尼乐园</h3>
+                        <p class="text-gray-600 mb-4">世界上第一座迪士尼主题公园，适合家庭游玩，充满童话色彩和欢乐氛围。</p>
+                        <div class="flex items-center text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 ml-2">4.9 (23,456)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700"><i class="fas fa-clock mr-1"></i>建议时长: 全天</span>
+                            <span class="text-blue-500 font-medium">$104起</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 完整排名表格 -->
+            <div class="mt-12 bg-white rounded-xl shadow-md overflow-hidden">
+                <table class="w-full">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="py-3 px-4 text-left">排名</th>
+                            <th class="py-3 px-4 text-left">景点名称</th>
+                            <th class="py-3 px-4 text-left">特色</th>
+                            <th class="py-3 px-4 text-left">评分</th>
+                            <th class="py-3 px-4 text-left">门票价格</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">1</td>
+                            <td class="py-3 px-4 font-medium">圣莫尼卡海滩</td>
+                            <td class="py-3 px-4">标志性海滩与码头</td>
+                            <td class="py-3 px-4">4.8 ★</td>
+                            <td class="py-3 px-4">免费</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">2</td>
+                            <td class="py-3 px-4 font-medium">好莱坞标志</td>
+                            <td class="py-3 px-4">洛杉矶地标</td>
+                            <td class="py-3 px-4">4.7 ★</td>
+                            <td class="py-3 px-4">免费</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">3</td>
+                            <td class="py-3 px-4 font-medium">好莱坞环球影城</td>
+                            <td class="py-3 px-4">电影主题公园</td>
+                            <td class="py-3 px-4">4.9 ★</td>
+                            <td class="py-3 px-4">$109起</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">4</td>
+                            <td class="py-3 px-4 font-medium">格里菲斯天文台</td>
+                            <td class="py-3 px-4">城市全景与天文观测</td>
+                            <td class="py-3 px-4">4.8 ★</td>
+                            <td class="py-3 px-4">免费</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">5</td>
+                            <td class="py-3 px-4 font-medium">比佛利山庄</td>
+                            <td class="py-3 px-4">奢华购物与住宅区</td>
+                            <td class="py-3 px-4">4.6 ★</td>
+                            <td class="py-3 px-4">免费</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">6</td>
+                            <td class="py-3 px-4 font-medium">迪士尼乐园</td>
+                            <td class="py-3 px-4">童话主题公园</td>
+                            <td class="py-3 px-4">4.9 ★</td>
+                            <td class="py-3 px-4">$104起</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">7</td>
+                            <td class="py-3 px-4 font-medium">盖蒂中心</td>
+                            <td class="py-3 px-4">艺术博物馆与花园</td>
+                            <td class="py-3 px-4">4.8 ★</td>
+                            <td class="py-3 px-4">免费(停车$20)</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">8</td>
+                            <td class="py-3 px-4 font-medium">洛杉矶郡艺术博物馆</td>
+                            <td class="py-3 px-4">城市之光装置艺术</td>
+                            <td class="py-3 px-4">4.5 ★</td>
+                            <td class="py-3 px-4">$20</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">9</td>
+                            <td class="py-3 px-4 font-medium">威尼斯海滩</td>
+                            <td class="py-3 px-4">街头艺术与冲浪文化</td>
+                            <td class="py-3 px-4">4.6 ★</td>
+                            <td class="py-3 px-4">免费</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4">10</td>
+                            <td class="py-3 px-4 font-medium">好莱坞星光大道</td>
+                            <td class="py-3 px-4">明星手印与足迹</td>
+                            <td class="py-3 px-4">4.3 ★</td>
+                            <td class="py-3 px-4">免费</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 酒店推荐 -->
+    <section id="hotels" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">洛杉矶优质酒店推荐</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 酒店1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="比佛利山庄酒店" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full font-bold">豪华型</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">比佛利山庄酒店</h3>
+                        <p class="text-gray-600 mb-4">位于比佛利山庄中心，提供豪华住宿、室外泳池和米其林星级餐厅。</p>
+                        <div class="flex items-center text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 ml-2">4.9 (2,345)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="block text-gray-700"><i class="fas fa-map-marker-alt mr-2"></i>比佛利山庄</span>
+                                <span class="block text-gray-700"><i class="fas fa-wifi mr-2"></i>免费WiFi</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-gray-500 line-through">$850</span>
+                                <span class="block text-2xl font-bold text-pink-500">$720/晚</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg transition-all">立即预订</button>
+                    </div>
+                </div>
+
+                <!-- 酒店2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="圣莫尼卡海滩酒店" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full font-bold">海景型</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">圣莫尼卡海滩酒店</h3>
+                        <p class="text-gray-600 mb-4">直接坐落在圣莫尼卡海滩上，部分客房享有太平洋全景，步行可达码头。</p>
+                        <div class="flex items-center text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-600 ml-2">4.7 (1,876)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="block text-gray-700"><i class="fas fa-map-marker-alt mr-2"></i>圣莫尼卡</span>
+                                <span class="block text-gray-700"><i class="fas fa-utensils mr-2"></i>海景餐厅</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-gray-500 line-through">$650</span>
+                                <span class="block text-2xl font-bold text-blue-500">$550/晚</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition-all">立即预订</button>
+                    </div>
+                </div>
+
+                <!-- 酒店3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="relative h-48">
+                        <img src="https://luxe-city-center-hotel-los-angeles.ibooked.cn/data/Photos/OriginalPhoto/11573/1157385/1157385741/E-Central-Hotel-Downtown-Los-Angeles-Exterior.JPEG" 
+                             alt="洛杉矶市中心酒店" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full font-bold">商务型</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">洛杉矶市中心酒店</h3>
+                        <p class="text-gray-600 mb-4">现代化高层酒店，位于市中心商业区，交通便利，配备完善的会议设施。</p>
+                        <div class="flex items-center text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 ml-2">4.5 (3,210)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="block text-gray-700"><i class="fas fa-map-marker-alt mr-2"></i>市中心</span>
+                                <span class="block text-gray-700"><i class="fas fa-business-time mr-2"></i>商务中心</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-gray-500 line-through">$450</span>
+                                <span class="block text-2xl font-bold text-green-500">$380/晚</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-all">立即预订</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 酒店排名表格 -->
+            <div class="mt-12 bg-white rounded-xl shadow-md overflow-hidden">
+                <table class="w-full">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="py-3 px-4 text-left">排名</th>
+                            <th class="py-3 px-4 text-left">酒店名称</th>
+                            <th class="py-3 px-4 text-left">位置</th>
+                            <th class="py-3 px-4 text-left">评分</th>
+                            <th class="py-3 px-4 text-left">价格区间</th>
+                            <th class="py-3 px-4 text-left">特色</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">1</td>
+                            <td class="py-3 px-4 font-medium">比佛利山庄酒店</td>
+                            <td class="py-3 px-4">比佛利山庄</td>
+                            <td class="py-3 px-4">4.9 ★</td>
+                            <td class="py-3 px-4">$700-$1200</td>
+                            <td class="py-3 px-4">奢华体验、米其林餐厅</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">2</td>
+                            <td class="py-3 px-4 font-medium">圣莫尼卡海滩酒店</td>
+                            <td class="py-3 px-4">圣莫尼卡</td>
+                            <td class="py-3 px-4">4.7 ★</td>
+                            <td class="py-3 px-4">$500-$900</td>
+                            <td class="py-3 px-4">海景房、步行至海滩</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">3</td>
+                            <td class="py-3 px-4 font-medium">洛杉矶市中心酒店</td>
+                            <td class="py-3 px-4">市中心</td>
+                            <td class="py-3 px-4">4.5 ★</td>
+                            <td class="py-3 px-4">$350-$600</td>
+                            <td class="py-3 px-4">商务设施、交通便利</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">4</td>
+                            <td class="py-3 px-4 font-medium">好莱坞罗斯福酒店</td>
+                            <td class="py-3 px-4">好莱坞</td>
+                            <td class="py-3 px-4">4.4 ★</td>
+                            <td class="py-3 px-4">$400-$750</td>
+                            <td class="py-3 px-4">历史建筑、星光大道旁</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">5</td>
+                            <td class="py-3 px-4 font-medium">洛杉矶国际机场酒店</td>
+                            <td class="py-3 px-4">机场附近</td>
+                            <td class="py-3 px-4">4.3 ★</td>
+                            <td class="py-3 px-4">$250-$450</td>
+                            <td class="py-3 px-4">机场接送、性价比高</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">6</td>
+                            <td class="py-3 px-4 font-medium">威尼斯海滩精品酒店</td>
+                            <td class="py-3 px-4">威尼斯海滩</td>
+                            <td class="py-3 px-4">4.6 ★</td>
+                            <td class="py-3 px-4">$300-$550</td>
+                            <td class="py-3 px-4">艺术设计、海滩文化</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">7</td>
+                            <td class="py-3 px-4 font-medium">迪士尼乐园酒店</td>
+                            <td class="py-3 px-4">安纳海姆</td>
+                            <td class="py-3 px-4">4.8 ★</td>
+                            <td class="py-3 px-4">$400-$800</td>
+                            <td class="py-3 px-4">主题房间、乐园特权</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">8</td>
+                            <td class="py-3 px-4 font-medium">帕萨迪纳历史酒店</td>
+                            <td class="py-3 px-4">帕萨迪纳</td>
+                            <td class="py-3 px-4">4.4 ★</td>
+                            <td class="py-3 px-4">$350-$600</td>
+                            <td class="py-3 px-4">复古风格、玫瑰碗附近</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-3 px-4">9</td>
+                            <td class="py-3 px-4 font-medium">长滩海港度假村</td>
+                            <td class="py-3 px-4">长滩</td>
+                            <td class="py-3 px-4">4.5 ★</td>
+                            <td class="py-3 px-4">$380-$650</td>
+                            <td class="py-3 px-4">海滨度假、游轮码头</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4">10</td>
+                            <td class="py-3 px-4 font-medium">西好莱坞设计酒店</td>
+                            <td class="py-3 px-4">西好莱坞</td>
+                            <td class="py-3 px-4">4.6 ★</td>
+                            <td class="py-3 px-4">$420-$700</td>
+                            <td class="py-3 px-4">现代设计、夜生活丰富</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 旅行贴士 -->
+    <section id="tips" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">洛杉矶旅行实用贴士</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 贴士1 -->
+                <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-car text-2xl text-blue-500 mr-3"></i>
+                        <h3 class="text-xl font-bold text-gray-800">交通出行</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>洛杉矶面积广阔，建议租车自驾游，注意避开高峰时段(7-9am, 4-7pm)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>地铁系统(Metro)覆盖主要景点，但班次较少，需提前规划</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Uber/Lyft网约车方便但价格浮动大，机场接送建议提前预订</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 贴士2 -->
+                <div class="bg-yellow-50 rounded-xl p-6 border-l-4 border-yellow-500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-utensils text-2xl text-yellow-500 mr-3"></i>
+                        <h3 class="text-xl font-bold text-gray-800">美食推荐</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>尝试正宗墨西哥卷饼(Taco)，推荐Guisados或Leo's Tacos Truck</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>比佛利山庄的Spago是明星常去的米其林餐厅</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>韩国城的烤肉和圣盖博谷的中餐非常地道</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 贴士3 -->
+                <div class="bg-green-50 rounded-xl p-6 border-l-4 border-green-500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-sun text-2xl text-green-500 mr-3"></i>
+                        <h3 class="text-xl font-bold text-gray-800">天气与穿着</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>洛杉矶全年阳光充足，昼夜温差大，建议携带防晒用品和薄外套</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>5-10月为最佳旅游季节，11-4月偶有降雨但气温宜人</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>海滩区域多风，建议携带防风衣物</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 更多贴士 -->
+            <div class="mt-8 grid md:grid-cols-2 gap-8">
+                <div class="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-wallet text-2xl text-purple-500 mr-3"></i>
+                        <h3 class="text-xl font-bold text-gray-800">消费与预算</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>洛杉矶消费水平较高，景点门票和餐饮占预算主要部分</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>主题公园门票建议提前在线购买可享折扣</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>小费文化：餐厅15-20%，酒店行李员$2/件，出租车10-15%</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-red-50 rounded-xl p-6 border-l-4 border-red-500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-exclamation-triangle text-2xl text-red-500 mr-3"></i>
+                        <h3 class="text-xl font-bold text-gray-800">安全提示</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>避免在市中心Skid Row区域单独行走，夜间注意安全</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>车内不要遗留贵重物品，特别是在旅游景点停车场</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>紧急情况拨打911，中国公民可联系总领馆(213)807-8088</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">洛杉矶旅游指南</h3>
+                    <p class="text-gray-400">为您提供最全面的洛杉矶旅游信息，包括景点推荐、酒店预订和实用旅行贴士。</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#scenic" class="text-gray-400 hover:text-white transition-all">美景排行</a></li>
+                        <li><a href="#hotels" class="text-gray-400 hover:text-white transition-all">酒店推荐</a></li>
+                        <li><a href="#tips" class="text-gray-400 hover:text-white transition-all">旅行贴士</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">联系我们</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>bigsea0922@gmail.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span>+1 (213) 555-0188</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>123 Wilshire Blvd, Los Angeles</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">关注我们</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <i class="fab fa-weixin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <i class="fab fa-weibo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://lalvyou.com" alt="二维码" class="w-24 h-24">
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 洛杉矶旅游指南. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
-	
 </html>
