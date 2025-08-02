@@ -678,7 +678,7 @@
                         </a>
                     </div>
                     <div class="mt-4">
-                        <button onclick="document.getElementById('aboutDialog').style.display='block'"> <h3 class="text-xl font-bold mb-4">关于我们</h3></button>
+                        <button id="openBtn"> <h3 class="text-xl font-bold mb-4">关于我们</h3></button>
                     </div>
                 </div>
             </div>
@@ -707,12 +707,15 @@
     </script>
 <script>
   const dialog = document.getElementById('aboutDialog');
+  const openBtn = document.getElementById('openBtn');
   openBtn.addEventListener('click', () => {
     dialog.showModal(); // 使用 showModal() 创建模态对话框
   });
+
 </script>
 </body>
 </html>
+
 
 
 
