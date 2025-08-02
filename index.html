@@ -20,7 +20,7 @@
         .transition-all {
             transition: all 0.3s ease;
         }
-        dialog {
+        .dialog {
           display:none;
           border: 1px solid black;
           border-radius: 5px;
@@ -31,7 +31,7 @@
           position: fixed; 
         }
         
-        dialog::backdrop {
+        .dialog::backdrop {
           background-color: rgba(0, 0, 0, 0.5);
         }
     </style>
@@ -691,12 +691,12 @@
         </div>
     </footer>
 
-     <dialog id="aboutDialog">
+     <div id="aboutDialog" class="dialog">
   <h2>关于我们</h2>
   <p>本网站为独立旅游爱好者创建，旨在分享洛杉矶的旅游资讯和城市体验。我们致力于提供中立、公开的信息，帮助游客了解目的地文化与住宿选择。</p >
   <p>本网站与任何酒店集团、品牌或商业机构无关，也未获得任何形式的认可或合作关系。本站不提供预订服务，也不开展任何商业交易。</p >
   <p>如对域名或内容有任何疑问，欢迎与我们联系，我们愿意本着善意沟通解决问题。</p >
-</dialog>
+</div>
     <script>
         // 简单的滚动效果
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -717,6 +717,7 @@ const dialog = document.getElementById('aboutDialog');
     </script>
 </body>
 </html>
+
 
 
 
