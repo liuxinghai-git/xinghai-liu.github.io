@@ -19,6 +19,18 @@
         .transition-all {
             transition: all 0.3s ease;
         }
+        dialog {
+          border: 1px solid black;
+          border-radius: 5px;
+          padding: 1em;
+          background-color: #f0f0f0;
+          max-width:600px; 
+          margin:auto;
+        }
+        
+        dialog::backdrop {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
@@ -676,7 +688,7 @@
         </div>
     </footer>
 
-     <dialog id="aboutDialog" style="display:none; background:white; padding:20px; border-radius:8px; max-width:600px; margin:auto;">
+     <dialog id="aboutDialog" style="display:none;">
   <h2>关于我们</h2>
   <p>本网站为独立旅游爱好者创建，旨在分享洛杉矶的旅游资讯和城市体验。我们致力于提供中立、公开的信息，帮助游客了解目的地文化与住宿选择。</p >
   <p>本网站与任何酒店集团、品牌或商业机构无关，也未获得任何形式的认可或合作关系。本站不提供预订服务，也不开展任何商业交易。</p >
@@ -693,8 +705,15 @@
             });
         });
     </script>
+<script>
+  const dialog = document.getElementById('aboutDialog');
+  openBtn.addEventListener('click', () => {
+    dialog.showModal(); // 使用 showModal() 创建模态对话框
+  });
+</script>
 </body>
 </html>
+
 
 
 
