@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -27,6 +28,7 @@
           background-color: #f0f0f0;
           max-width:600px; 
           margin:auto;
+          position: fixed; 
         }
         
         dialog::backdrop {
@@ -709,12 +711,13 @@
 const dialog = document.getElementById('aboutDialog');
   const openBtn = document.getElementById('openBtn');
   openBtn.addEventListener('click', () => {
-    dialog.showModal(); 
+    dialog.display='block';
   });
 
     </script>
 </body>
 </html>
+
 
 
 
